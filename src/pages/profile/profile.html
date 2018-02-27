@@ -1,0 +1,153 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Resevation list - 
+      <!-- Restaurant ABC       -->
+      {{ Reserved_restaurant_name }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header text-wrap padding>
+      <ion-item>
+        <ion-label></ion-label>
+        <ion-datetime displayFormat="DDDD MMM, DD YYYY" disabled="true" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+      Today's reservation: {{ listalength }} bookings ( {{total}}  guests )
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-list *ngFor="let value of list_today_reservation; let i = index; ">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <!-- <p>
+                  {{ value.Reserved_Date }} &nbsp;
+                </p> -->
+                <p>
+                  {{ value.Reserved_Date_hour }}
+                </p>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <h2>
+                  {{ value.Reserved_Customer_name }} &nbsp; @ {{ value.Reserved_Guests_number}}
+                </h2>
+                <button ion-item>
+                  <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                  {{ value.Reserved_Customer_email}}
+                </button>
+                <button ion-item>
+                  <ion-icon ios="ios-call" md="md-call"></ion-icon>
+                  <!-- {{ value.Reserved_Cutomer_phone}} -->
+                </button>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <h4>
+                  {{ value.Reserved_Special_request}}
+                </h4>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+
+      <!-- ///////////////////////////////////////////       -->
+
+
+
+      <!-- ///////////////////////////////////////////       -->
+
+      <!-- <ion-list *ngFor="let value of list; let i = index; ">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <p>
+                  {{ value.Reserved_Date }} &nbsp;
+                </p>
+                <p>
+                  {{ value.Reserved_Date_hour }}
+                </p>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <h2>
+                  {{ value.Reserved_Customer_name }}
+
+                </h2>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <p>
+                  {{ value.Reserved_Guests_number}}
+                </p>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list> -->
+
+      <!-- ////////////////////////////////// -->
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header text-wrap>
+      After today's reservation: ( {{ listblength }} bookings )
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list *ngFor="let value of list_after_today_reservation; let i = index; ">
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <p>
+                  {{ value.Reserved_Date }} &nbsp;
+                </p>
+                <p>
+                  {{ value.Reserved_Date_hour }}
+                </p>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <h2>
+                  {{ value.Reserved_Customer_name }}
+
+                </h2>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <p>
+                  {{ value.Reserved_Guests_number}}
+                </p>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>

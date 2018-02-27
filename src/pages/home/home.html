@@ -3,16 +3,57 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>What's happening today</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <!-- <ion-item *ngFor="let name of reservedDate | async; let i = index;">
+        {{ name.Reserved_Date }}
+      </ion-item> -->
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list class="A">
+          <ion-item *ngFor="let name of reservedDate | async; let i = index;">
+            {{ name.Reserved_restaurant_name }} {{ name.Reserved_Date_hour }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col>
+        <ion-list class="B">
+          <ion-item *ngFor="let name of reservedDate | async; let i = index;">
+            {{ name.Reserved_Guests_number }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+
+      <ion-col>
+        <ion-list class="B">
+          <ion-item *ngFor="let name of reservedDate | async; let i = index;">
+            {{ name.Reserved_Customer_name }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col>
+        <ion-list class="B">
+          <ion-item *ngFor="let name of reservedDate | async; let i = index;">
+            {{ name.Reserved_Seat_location }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+
+      <ion-col>
+        <ion-list class="C">
+          <ion-item *ngFor="let name of reservedDate | async; let i = index;">
+            {{ name.Reserved_Special_request }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid> -->
 </ion-content>

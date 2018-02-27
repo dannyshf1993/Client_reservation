@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Guests</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- //////////////////////////////Seated guests
+  <ion-card>
+
+    <ion-card-header text-wrap padding>
+      <ion-buttons end>
+        <button ion-button clear color="dark">
+          {{ timehour }}
+        </button>
+      </ion-buttons>
+      Seated Guests: </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-list *ngFor="let value of list_seated_guests; let i = index; ">
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <p>
+                  {{ value.Reserved_Date_hour }}
+                </p>
+              </ion-item>
+              <ion-buttons>
+                <button ion-button (click)="onCountdown()">Start</button>
+
+              </ion-buttons>
+              <ion-item>
+                <ion-range min="0" max="3600" [(ngModel)]="tick" color="secondary">
+                  <ion-label range-left>0</ion-label>
+                  <ion-label range-right>{{tick}} seconds</ion-label>
+                </ion-range>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <h2>
+                  {{ value.Reserved_Customer_name }}
+                </h2>
+                <button ion-item>
+                  <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                  {{ value.Reserved_Customer_email}}
+                </button>
+                <button ion-item>
+                  <ion-icon ios="ios-call" md="md-call"></ion-icon>
+                  {{ value.Reserved_Cutomer_phone}}
+                </button>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <h4>
+                </h4>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+
+  //////////////////////////////////////////////////today's reservation
+
+  <ion-card>
+    <ion-card-header text-wrap padding>
+      <ion-item>
+        <ion-label></ion-label>
+        <ion-datetime displayFormat="DDDD MMM, DD YYYY" disabled="true" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+      Today's reservation: {{ listalength }} bookings ( {{total}} guests )
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-list *ngFor="let value of list_today_reservation; let i = index; ">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <p>
+                    {{ value.Reserved_Date }} &nbsp;
+                  </p>
+                <p>
+                  {{ value.Reserved_Date_hour }}
+                </p>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <h2>
+                  {{ value.Reserved_Customer_name }}
+                </h2>
+                <button ion-item>
+                  <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                  {{ value.Reserved_Customer_email}}
+                </button>
+                <button ion-item>
+                  <ion-icon ios="ios-call" md="md-call"></ion-icon>
+                  {{ value.Reserved_Cutomer_phone}}
+                </button>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <h4>
+                </h4>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card> -->
+
+</ion-content>

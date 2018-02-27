@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database";
+import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";// import { linkToSegment } from 'ionic-angular/navigation/nav-util';
 import { AlertController } from 'ionic-angular';
 import { ActionSheetController } from 'ionic-angular';
 

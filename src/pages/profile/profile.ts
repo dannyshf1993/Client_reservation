@@ -2,9 +2,8 @@ import { Component, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 import { UserProvider } from '../../providers/user/user';
-import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import firebase from 'firebase';
-// import { linkToSegment } from 'ionic-angular/navigation/nav-util';
+import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";// import { linkToSegment } from 'ionic-angular/navigation/nav-util';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -73,7 +72,7 @@ export class ProfilePage {
     public afd: AngularFireDatabase,
     public alertCtrl: AlertController,
     public imghandler: ImghandlerProvider) {
-    this.reservedDate = this.afd.list('/reservedDate', { preserveSnapshot: true });
+    // this.reservedDate = this.afd.list('/reservedDate', { preserveSnapshot: true });
 
   }
 

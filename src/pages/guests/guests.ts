@@ -2,7 +2,7 @@ import { Component, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 import { UserProvider } from '../../providers/user/user';
-import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";// import { linkToSegment } from 'ionic-angular/navigation/nav-util';
 import firebase from 'firebase';
 import { linkToSegment } from 'ionic-angular/navigation/nav-util';
 import { TimerObservable } from 'rxjs/observable/TimerObservable';

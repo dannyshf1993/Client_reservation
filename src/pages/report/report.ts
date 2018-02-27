@@ -3,7 +3,7 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { Chart } from 'chart.js';
 import { UserProvider } from '../../providers/user/user';
 
-import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";// import { linkToSegment } from 'ionic-angular/navigation/nav-util';
 import firebase from 'firebase';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 
@@ -101,7 +101,7 @@ export class ReportPage {
     public afd: AngularFireDatabase,
     public alertCtrl: AlertController,
     public imghandler: ImghandlerProvider) {
-    this.reservedDate = this.afd.list('/reservedDate', { preserveSnapshot: true });
+    // this.reservedDate = this.afd.list('/reservedDate', { preserveSnapshot: true });
 
   }
 
